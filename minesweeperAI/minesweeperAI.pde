@@ -4,17 +4,17 @@ import java.util.LinkedList;
 import java.math.BigInteger;
 
 //number of tiles
-int tilesX = 30;
-int tilesY = 16;
+int tilesX = 75;
+int tilesY = 50;
 
 //size of each tile
-int tileSize = 30;
+int tileSize = 20;
 
 
 Tile[][] tiles = new Tile[tilesX][tilesY];
 
 //self explanatory
-int numberOfBombs = 99;
+int numberOfBombs = 675;
 boolean gameOver = false;
 AI ai;
 //images used
@@ -42,9 +42,14 @@ int timer = 0;
 boolean gameOverShow = true;
 
 void setup() {
-  frameRate(300);
+  frameRate(20);
   //fullScreen();
+  //size(tilesX * tileSize, tilesY * tileSize);  ///<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<going to need to change this to match the amount to tiles and the tile size
+  //int resXX = tilesX * tileSize;
+  //int resYY = tilesY * tileSize; 
   size(900, 480);  ///<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<going to need to change this to match the amount to tiles and the tile size
+  size(tilesX * tileSize, tilesY * tileSize);  ///<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<going to need to change this to match the amount to tiles and the tile size
+  //size(resXX, resYY);  ///<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<going to need to change this to match the amount to tiles and the tile size
   cursor = loadImage("cursor.png");
   flag = loadImage("flag300000.png");
   hiddenSprite  = loadImage("hidden10000.png");
